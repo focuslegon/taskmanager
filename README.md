@@ -19,8 +19,8 @@ Prerequisites
 
     bash
 
-git clone https://github.com/.git
-cd TaskManager
+git clone https://github.com/focuslegon/taskmanager.git
+cd taskmanager
 
 ## Install PHP dependencies:
 
