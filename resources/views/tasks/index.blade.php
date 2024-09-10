@@ -14,6 +14,7 @@
 
     <!-- Display the response message from Flask -->
     <div id="message" class="alert alert-success" style="display:none;"></div>
+    <div id="error" class="alert alert-danger" style="display:none;"></div>
 
     <!-- Task Creation Form -->
     <div class="card mb-4">
@@ -47,6 +48,7 @@
             },
             error: function(xhr, status, error) {
                 console.log(xhr.responseText);
+                $('#error').text(xhr?.responseJSON?.message).show();
             }
         });
 
@@ -75,7 +77,7 @@
                     $('#create-task-form')[0].reset();
                 },
                 error: function(xhr, status, error) {
-                    console.log(xhr.responseText);
+                    $('#error').text(xhr?.responseJSON?.message).show();
                 }
             });
         });
@@ -99,6 +101,7 @@
                 },
                 error: function(xhr, status, error) {
                     console.log(xhr.responseText);
+                    $('#error').text(xhr?.responseJSON?.message).show();
                 }
             });
         });
